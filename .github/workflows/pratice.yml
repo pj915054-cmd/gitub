@@ -1,0 +1,18 @@
+name: "pratice file for github action"
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  python_app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "setting up python in our company"
+      - run: echo "Hi ,How are you bro"
+
+      - name: "calify task movie show company name"
+      - run: echo "Good moning How are you "
+      
+    
