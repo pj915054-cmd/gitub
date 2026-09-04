@@ -1,15 +1,17 @@
-from flask import flask,jsonify
+from flask import Flask, jsonify
 
-app = flask(__name__)
+app = Flask(__name__)
+
 
 @app.route("/")
 def home():
-  return jsonify({"message":"CI DEMO API is running"})
-  
-@app.health("/health")
+    return jsonify({"message": "CI DEMO API is running"})
+
+
+@app.route("/health")
 def health():
-  return jsonify({"status":"ok"})
+    return jsonify({"status": "ok"})
+
 
 if __name__ == "__main__":
-  app.run(debug = True)
-  
+    app.run(debug=True)
